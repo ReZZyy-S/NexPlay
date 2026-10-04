@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NexPlay - a clean, fast browser gaming hub.">
+  <title>NexPlay | Browser Games</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-grid"></div>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <header class="navbar">
+    <a class="logo" href="#top" aria-label="NexPlay home">
+      <span class="logo-mark">N</span>
+      <span>Nex<span>Play</span></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="active" href="#top">Home</a>
+      <a href="#games">Games</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <button class="mobile-menu" id="mobileMenu" aria-label="Open menu" aria-expanded="false">☰</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="status-dot"></span> NEXPLAY IS ONLINE</div>
+        <h1>PLAY.<br><span>DISCOVER.</span><br>REPEAT.</h1>
+        <p>
+          A fast, simple place to discover browser games.
+          Pick a game, hit play, and get straight into the action.
+        </p>
+        <div class="hero-buttons">
+          <a class="button primary" href="#games">Explore Games <span>→</span></a>
+          <a class="button secondary" href="#categories">Browse Categories</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="card-top">
+          <span>FEATURED</span>
+          <span class="live-pill">● LIVE</span>
+        </div>
+        <div class="hero-game-art">
+          <div class="scanline"></div>
+          <div class="pixel-n">N</div>
+          <div class="hero-game-title">YOUR NEXT<br><strong>FAVORITE GAME</strong></div>
+        </div>
+        <div class="hero-card-bottom">
+          <div>
+            <small>FEATURED GAME</small>
+            <h3>Coming Soon</h3>
+          </div>
+          <button class="play-circle" id="featuredButton" aria-label="Play featured game">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>01</strong><span>Game Hub</span></div>
+      <div><strong>∞</strong><span>Possibilities</span></div>
+      <div><strong>24/7</strong><span>Ready to Play</span></div>
+    </section>
+
+    <section class="section" id="games">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">DISCOVER</p>
+          <h2>Featured Games</h2>
+        </div>
+        <div class="search-wrap">
+          <span>⌕</span>
+          <input id="gameSearch" type="search" placeholder="Search games..." aria-label="Search games">
+        </div>
+      </div>
+
+      <div class="filter-row" id="categories">
+        <button class="filter active" data-category="all">All</button>
+        <button class="filter" data-category="arcade">Arcade</button>
+        <button class="filter" data-category="action">Action</button>
+        <button class="filter" data-category="puzzle">Puzzle</button>
+        <button class="filter" data-category="casual">Casual</button>
+      </div>
+
+      <div class="game-grid" id="gameGrid">
+        <article class="game-card" data-title="Neon Runner" data-category="arcade action">
+          <div class="game-thumbnail neon">
+            <span class="game-icon">⚡</span>
+            <span class="tag">ARCADE</span>
+          </div>
+          <div class="game-info">
+            <h3>Neon Runner</h3>
+            <p>Arcade • Fast-paced</p>
+            <button class="card-button" data-game="Neon Runner">Play Game <span>→</span></button>
+          </div>
+        </article>
+
+        <article class="game-card" data-title="Block Breaker" data-category="arcade">
+          <div class="game-thumbnail blocks">
+            <span class="game-icon">◆</span>
+            <span class="tag">ARCADE</span>
+          </div>
+          <div class="game-info">
+            <h3>Block Breaker</h3>
+            <p>Arcade • Classic</p>
+            <button class="card-button" data-game="Block Breaker">Play Game <span>→</span></button>
+          </div>
+        </article>
+
+        <article class="game-card" data-title="Pixel Quest" data-category="action">
+          <div class="game-thumbnail quest">
+            <span class="game-icon">✦</span>
+            <span class="tag">ACTION</span>
+          </div>
+          <div class="game-info">
+            <h3>Pixel Quest</h3>
+            <p>Action • Adventure</p>
+            <button class="card-button" data-game="Pixel Quest">Play Game <span>→</span></button>
+          </div>
+        </article>
+
+        <article class="game-card" data-title="2048" data-category="puzzle">
+          <div class="game-thumbnail puzzle">
+            <span class="game-icon">2048</span>
+            <span class="tag">PUZZLE</span>
+          </div>
+          <div class="game-info">
+            <h3>2048</h3>
+            <p>Puzzle • Strategy</p>
+            <button class="card-button" data-game="2048">Play Game <span>→</span></button>
+          </div>
+        </article>
+
+        <article class="game-card" data-title="Click Rush" data-category="casual">
+          <div class="game-thumbnail click">
+            <span class="game-icon">+</span>
+            <span class="tag">CASUAL</span>
+          </div>
+          <div class="game-info">
+            <h3>Click Rush</h3>
+            <p>Casual • Score attack</p>
+            <button class="card-button" data-game="Click Rush">Play Game <span>→</span></button>
+          </div>
+        </article>
+
+        <article class="game-card" data-title="Cyber Dodge" data-category="action arcade">
+          <div class="game-thumbnail cyber">
+            <span class="game-icon">◇</span>
+            <span class="tag">ACTION</span>
+          </div>
+          <div class="game-info">
+            <h3>Cyber Dodge</h3>
+            <p>Action • Reflex</p>
+            <button class="card-button" data-game="Cyber Dodge">Play Game <span>→</span></button>
+          </div>
+        </article>
+      </div>
+
+      <div class="no-results" id="noResults" hidden>
+        <div>🔎</div>
+        <h3>No games found</h3>
+        <p>Try another search or category.</p>
+      </div>
+    </section>
+
+    <section class="section categories-section">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">EXPLORE</p>
+          <h2>Pick Your Vibe</h2>
+        </div>
+      </div>
+      <div class="category-grid">
+        <button class="category-card" data-category-jump="arcade"><span>🕹️</span><b>Arcade</b><small>Quick & addictive</small></button>
+        <button class="category-card" data-category-jump="action"><span>⚔️</span><b>Action</b><small>Fast & intense</small></button>
+        <button class="category-card" data-category-jump="puzzle"><span>🧩</span><b>Puzzle</b><small>Think it through</small></button>
+        <button class="category-card" data-category-jump="casual"><span>✨</span><b>Casual</b><small>Relax & play</small></button>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div>
+        <p class="section-label">ABOUT NEXPLAY</p>
+        <h2>Your browser.<br>Your games.</h2>
+      </div>
+      <p>
+        NexPlay is a lightweight gaming hub built to make finding browser games
+        easier. This starter site is ready for you to replace the demo cards
+        with your own games and links.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">Nex<span>Play</span></div>
+    <p>Built for games. Made for the web.</p>
+    <span>© <span id="year"></span> NexPlay</span>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
